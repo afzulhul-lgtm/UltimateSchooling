@@ -22,7 +22,7 @@ import json
 import re
 
 # ---- CHANGE THIS PATH TO MATCH YOUR COMPUTER ----
-WEBSITE_ROOT = r"C:\Users\abdul\OneDrive\Desktop\Ultimate-Schooling-Web"
+WEBSITE_ROOT = r"C:\Users\abdul\Downloads\UltimateSchooling\UltimateSchooling"
 # --------------------------------------------------
 
 SITE_URL = "https://ultimateschooling.com"
