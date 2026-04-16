@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Ultimate Schooling</title>
+    
+    <meta name="title" content="Contact Us | Ultimate Schooling">
+    <meta name="description" content="Get in touch with Ultimate Schooling. Have questions about tech tutorials, AI guides, or learning resources? We're here to help!">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://ultimateschooling.com/contact.html" />
+    
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💻</text></svg>">
+    <link rel="stylesheet" href="style.css?v=4.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        .legal-content { 
+            background: #fff; 
+            padding: 40px; 
+            border-radius: 12px; 
+            box-shadow: 0 4px 20px rgba(0,0,0,0.04); 
+            margin-top: 20px; 
+            margin-bottom: 40px; 
+        }
+        .legal-content h1 { 
+            font-size: 2rem; 
+            color: #111; 
+            margin-bottom: 20px; 
+            border-bottom: 2px solid #2c3e9c; 
+            padding-bottom: 10px; 
+            display: inline-block; 
+        }
+        .contact-grid { 
+            display: grid; 
+            grid-template-columns: 1fr 1fr; 
+            gap: 40px; 
+            margin-top: 30px; 
+        }
+        .contact-info-box { 
+            background: #f0f4ff; 
+            padding: 25px; 
+            border-radius: 8px; 
+            border: 1px solid #d4e0ff; 
+            margin-bottom: 20px; 
+            display: flex; 
+            align-items: center; 
+            gap: 15px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .contact-info-box:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(44, 62, 156, 0.1);
+        }
+        .contact-info-box i { 
+            font-size: 2rem; 
+            color: #2c3e9c; 
+            width: 40px;
+            text-align: center;
+        }
+        .contact-info-box h3 {
+            color: #222;
+            margin-bottom: 5px;
+        }
+        .contact-info-box p {
+            margin: 0;
+            color: #555;
+        }
+        .contact-form input, 
+        .contact-form textarea { 
+            width: 100%; 
+            padding: 12px 15px; 
+            margin-bottom: 15px; 
+            border: 1px solid #ddd; 
+            border-radius: 6px; 
+            font-family: inherit;
+            font-size: 0.95rem;
+            transition: border-color 0.3s;
+        }
+        .contact-form input:focus,
+        .contact-form textarea:focus {
+            outline: none;
+            border-color: #2c3e9c;
+        }
+        .contact-form button { 
+            background: #2c3e9c; 
+            color: white; 
+            padding: 12px 30px; 
+            border: none; 
+            border-radius: 6px; 
+            font-weight: 600; 
+            cursor: pointer; 
+            width: 100%;
+            font-size: 1rem;
+            transition: background 0.3s, transform 0.2s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+        .contact-form button:hover {
+            background: #1a2a6c;
+            transform: translateY(-2px);
+        }
+        .response-time {
+            margin-top: 20px;
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            text-align: center;
+            font-size: 0.9rem;
+            color: #666;
+        }
+        .response-time i {
+            color: #2c3e9c;
+            margin-right: 5px;
+        }
+        .social-connect {
+            margin-top: 30px;
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+        }
+        .social-connect h3 {
+            margin-bottom: 15px;
+            color: #333;
+        }
+        .social-connect .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+        .social-connect .social-icons a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            color: white;
+            font-size: 1.2rem;
+            transition: transform 0.3s;
+        }
+        .social-connect .social-icons a:hover {
+            transform: translateY(-3px);
+        }
+        
+        /* Dark mode styles */
+        [data-theme="dark"] .legal-content {
+            background: #1e1e1e !important;
+        }
+        [data-theme="dark"] .legal-content h1 {
+            color: #fff !important;
+            border-bottom-color: #4a6cf7 !important;
+        }
+        [data-theme="dark"] .contact-info-box { 
+            background: #2a2a2a !important; 
+            border-color: #444 !important; 
+        }
+        [data-theme="dark"] .contact-info-box i {
+            color: #4a6cf7 !important;
+        }
+        [data-theme="dark"] .contact-info-box h3 {
+            color: #fff !important;
+        }
+        [data-theme="dark"] .contact-info-box p {
+            color: #ccc !important;
+        }
+        [data-theme="dark"] .contact-form input,
+        [data-theme="dark"] .contact-form textarea {
+            background: #2a2a2a !important;
+            border-color: #444 !important;
+            color: #fff !important;
+        }
+        [data-theme="dark"] .contact-form input:focus,
+        [data-theme="dark"] .contact-form textarea:focus {
+            border-color: #4a6cf7 !important;
+        }
+        [data-theme="dark"] .contact-form button {
+            background: #4a6cf7 !important;
+        }
+        [data-theme="dark"] .contact-form button:hover {
+            background: #3a5ad7 !important;
+        }
+        [data-theme="dark"] .response-time {
+            background: #2a2a2a !important;
+            color: #ccc !important;
+        }
+        [data-theme="dark"] .social-connect {
+            border-top-color: #444 !important;
+        }
+        [data-theme="dark"] .social-connect h3 {
+            color: #fff !important;
+        }
+        
+        @media (max-width: 768px) { 
+            .contact-grid { 
+                grid-template-columns: 1fr; 
+            } 
+        }
+    </style>
+
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+
+</head>
+<body>
+    <script>if(localStorage.getItem('theme') === 'dark') document.documentElement.setAttribute('data-theme', 'dark');</script>
+
+    <header class="main-header" style="margin-bottom: 0;">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="index.html" style="text-decoration: none; color: inherit;"><h1>💻 Ultimate Schooling</h1></a>
+                </div>
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="tech-news.html">Tech News</a></li>
+                        <li><a href="calculators.html">Tools</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="legal-content">
+            <h1>📬 Contact Us</h1>
+            <p style="font-size: 1.1rem; color: #666; margin-bottom: 30px;">Have a question about our tech tutorials? Need help with coding? Want to collaborate on educational content? We'd love to hear from you. Fill out the form below or reach out to us directly.</p>
+            
+            <div class="contact-grid">
+                <div>
+                    <div class="contact-info-box">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h3>Email Us</h3>
+                            <p>contact@ultimateschooling.com</p>
+                            <small style="color: #888;">For general inquiries</small>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-info-box">
+                        <i class="fas fa-graduation-cap"></i>
+                        <div>
+                            <h3>Learning Support</h3>
+                            <p>support@ultimateschooling.com</p>
+                            <small style="color: #888;">For tutorial help & questions</small>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-info-box">
+                        <i class="fas fa-newspaper"></i>
+                        <div>
+                            <h3>News & Editorial</h3>
+                            <p>editorial@ultimateschooling.com</p>
+                            <small style="color: #888;">For news tips & content</small>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-info-box">
+                        <i class="fas fa-briefcase"></i>
+                        <div>
+                            <h3>Business Inquiries</h3>
+                            <p>business@ultimateschooling.com</p>
+                            <small style="color: #888;">For partnerships & advertising</small>
+                        </div>
+                    </div>
+                    
+                    <div class="response-time">
+                        <i class="fas fa-clock"></i> We typically respond within 24-48 hours on business days.
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <form onsubmit="event.preventDefault(); alert('✅ Thank you for reaching out! Your message has been sent to the Ultimate Schooling team. We will get back to you soon.'); this.reset();">
+                        <input type="text" placeholder="Your Full Name *" required>
+                        <input type="email" placeholder="Your Email Address *" required>
+                        <select style="width: 100%; padding: 12px 15px; margin-bottom: 15px; border: 1px solid #ddd; border-radius: 6px; font-family: inherit; font-size: 0.95rem; background: white;" required>
+                            <option value="">Select Topic *</option>
+                            <option value="general">General Inquiry</option>
+                            <option value="tutorial">Tutorial Help</option>
+                            <option value="suggestion">Content Suggestion</option>
+                            <option value="correction">Report Error/Correction</option>
+                            <option value="business">Business/Partnership</option>
+                            <option value="other">Other</option>
+                        </select>
+                        <textarea rows="5" placeholder="How can we help you? *" required></textarea>
+                        <button type="submit"><i class="fas fa-paper-plane"></i> Send Message</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="social-connect">
+                <h3>🌐 Connect With Us</h3>
+                <div class="social-icons">
+                    <a href="#" style="background: #1877F2;" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" style="background: #1DA1F2;" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" style="background: #E1306C;" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" style="background: #0A66C2;" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" style="background: #FF0000;" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
+                <p style="margin-top: 15px; color: #888; font-size: 0.9rem;">Follow us for daily tech tips, coding tutorials, and learning resources!</p>
+            </div>
+        </div>
+    </main>
+    
+    <footer class="footer" style="background: #2c3e50; padding: 40px 0 20px; border-top: none;">
+        <div class="container">
+            <div class="footer-socials" style="display: flex; justify-content: center; gap: 15px; margin-bottom: 25px;">
+                <a href="#" class="share-btn btn-fb" style="width: 40px; height: 40px; background: #1877F2; color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; text-decoration: none;" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="share-btn btn-tw" style="width: 40px; height: 40px; background: #1DA1F2; color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; text-decoration: none;" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="share-btn btn-in" style="width: 40px; height: 40px; background: #E1306C; color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; text-decoration: none;" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            </div>
+            <div class="footer-links" style="display: flex; justify-content: center; gap: 25px; flex-wrap: wrap; margin-bottom: 20px; font-weight: 500;">
+                <a href="about.html" style="color: #fff; text-decoration: none;">About Us</a>
+                <a href="contact.html" style="color: #4a6cf7; text-decoration: none;">Contact Us</a>
+                <a href="privacy.html" style="color: #fff; text-decoration: none;">Privacy Policy</a>
+                <a href="terms.html" style="color: #fff; text-decoration: none;">Terms & Conditions</a>
+                <a href="dmca.html" style="color: #fff; text-decoration: none;">DMCA</a>
+            </div>
+            <div class="copyright" style="text-align: center; color: rgba(255,255,255,0.8); font-size: 0.9rem; border-top: 1px solid rgba(255,255,255,0.2); padding-top: 20px;">
+                <p>&copy; 2026 Ultimate Schooling - All rights reserved</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
