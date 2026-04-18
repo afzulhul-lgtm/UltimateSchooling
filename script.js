@@ -3,7 +3,7 @@
 const config = {
     folderName: 'articles',
     itemsPerPage: 15,
-    authorName: 'Prof. James Wilson',
+    authorName: 'Marcus J. Holloway',
     defaultAuthorImg: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=150&q=80'
 };
 
