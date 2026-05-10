@@ -1,5 +1,16 @@
 [
     {
+        "id": 51,
+        "title": "Saudi Aramco Profits Surge 26% as Strait of Hormuz Crisis Pushes Oil to $100 a Barrel",
+        "date": "May 11, 2026",
+        "author": "Marcus J. Holloway",
+        "authorImg": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=150&q=80",
+        "category": "Latest News",
+        "image": "55.webp",
+        "filename": "saudi-aramco-profits-surge-26-as-strait-of-hormuz-crisis-pushes-oil-to-51.html",
+        "excerpt": "Saudi Aramco profits surge 26% in Q1 2026 as oil prices hit $100 a barrel amid Strait of Hormuz crisis."
+    },
+    {
         "id": 50,
         "title": "China’s new fermentation system delivers 33% more biohydrogen while capturing carbon dioxide",
         "date": "May 10, 2026",
