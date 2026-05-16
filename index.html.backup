@@ -35,7 +35,15 @@
     <link rel="stylesheet" href="style.css?v=4.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-3Y5HBVKECV"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
+  gtag('config', 'G-3Y5HBVKECV');
+</script>
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -162,6 +170,15 @@
             <h2>Latest Tech News &amp; Learning Guides</h2>
             <ul id="seo-articles-ul">
                 <!-- ARTICLES_PLACEHOLDER -->
+                <li>
+                    <a href="https://ultimateschooling.com/articles/global-bond-selloff-worsens-as-oil-prices-surge-after-iran-war.html">
+                        <img src="articles/57.webp" alt="Global Bond Selloff Worsens as Oil Prices Surge After Iran War" loading="lazy" width="400" height="225">
+                        <div>
+                            <h3>Global Bond Selloff Worsens as Oil Prices Surge After Iran War</h3>
+                            <p>Global bond selloff 2026 sparks fear as oil prices surge and inflation rises, causing central banks to consider raising  &mdash; <small>May 16, 2026</small></p>
+                        </div>
+                    </a>
+                </li>
                 <li>
                     <a href="https://ultimateschooling.com/articles/trump-proposes-federal-gas-tax-pause-as-energy-prices-surge-after-iran-52.html">
                         <img src="articles/56.webp" alt="Trump Proposes Federal Gas Tax Pause as Energy Prices Surge After Iran War" loading="lazy" width="400" height="225">
