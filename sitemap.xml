@@ -5,69 +5,81 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://ultimateschooling.com</loc>
-    <lastmod>2026-05-17</lastmod>
+    <lastmod>2026-05-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://ultimateschooling.com/tech-news.html</loc>
-    <lastmod>2026-05-17</lastmod>
+    <lastmod>2026-05-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://ultimateschooling.com/calculators.html</loc>
-    <lastmod>2026-05-17</lastmod>
+    <lastmod>2026-05-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://ultimateschooling.com/about.html</loc>
-    <lastmod>2026-05-17</lastmod>
+    <lastmod>2026-05-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://ultimateschooling.com/contact.html</loc>
-    <lastmod>2026-05-17</lastmod>
+    <lastmod>2026-05-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://ultimateschooling.com/privacy.html</loc>
-    <lastmod>2026-05-17</lastmod>
+    <lastmod>2026-05-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://ultimateschooling.com/terms.html</loc>
-    <lastmod>2026-05-17</lastmod>
+    <lastmod>2026-05-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://ultimateschooling.com/dmca.html</loc>
-    <lastmod>2026-05-17</lastmod>
+    <lastmod>2026-05-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://ultimateschooling.com/disclaimer.html</loc>
-    <lastmod>2026-05-17</lastmod>
+    <lastmod>2026-05-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://ultimateschooling.com/editorial.html</loc>
-    <lastmod>2026-05-17</lastmod>
+    <lastmod>2026-05-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://ultimateschooling.com/author/james-wilson.html</loc>
-    <lastmod>2026-05-17</lastmod>
+    <lastmod>2026-05-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ultimateschooling.com/articles/ring-on-it-texas-roadhouse-olive-garden-among-restaurants-mandating-st.html</loc>
+    <lastmod>2026-05-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://ultimateschooling.com/articles/mouse-trap-chuck-e-cheese-deploys-big-brother-anti-theft-tactic-at-all.html</loc>
+    <lastmod>2026-05-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://ultimateschooling.com/articles/global-bond-selloff-worsens-as-oil-prices-surge-after-iran-war.html</loc>
