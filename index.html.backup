@@ -116,11 +116,11 @@
         <div class="container">
             <div class="header-content">
                 <div class="logo">
-                    <a href="index.html" style="text-decoration: none; color: inherit;"><h1>💻 Ultimate Schooling</h1></a>
+                    <a href="/" style="text-decoration: none; color: inherit;"><h1>💻 Ultimate Schooling</h1></a>
                 </div>
                  <nav class="main-nav" aria-label="Main Navigation">
                     <ul>
-                        <li><a href="index.html" class="active">Home</a></li>
+                        <li><a href="/" class="active">Home</a></li>
                         <li><a href="tech-news.html">Tech News</a></li>
                         <li><a href="latest-news.html">Latest News</a></li>
                         <!-- <li><a href="ai-ml.html">AI & ML</a></li> -->
@@ -170,6 +170,15 @@
             <h2>Latest Tech News &amp; Learning Guides</h2>
             <ul id="seo-articles-ul">
                 <!-- ARTICLES_PLACEHOLDER -->
+                <li>
+                    <a href="https://ultimateschooling.com/articles/meta-slashes-8000-jobs-in-major-ai-pivot-7000-employees-reassigned-to.html">
+                        <img src="articles/62.webp" alt="Meta Slashes 8,000 Jobs in Major AI Pivot — 7,000 Employees Reassigned to AI Teams" loading="lazy" width="400" height="225">
+                        <div>
+                            <h3>Meta Slashes 8,000 Jobs in Major AI Pivot — 7,000 Employees Reassigned to AI Teams</h3>
+                            <p>Meta layoffs 2026: 8,000 jobs cut as company pivots to AI, 7,000 reassigned to AI teams, in major strategy reversal. &mdash; <small>May 21, 2026</small></p>
+                        </div>
+                    </a>
+                </li>
                 <li>
                     <a href="https://ultimateschooling.com/articles/google-io-2026-13-biggest-announcements-gemini-35-project-aura-univers.html">
                         <img src="articles/61.webp" alt="Google I/O 2026: 13 Biggest Announcements — Gemini 3.5, Project Aura, Universal Cart & More" loading="lazy" width="400" height="225">
