@@ -1,7 +1,7 @@
 import os
 
 # 1. Apna asli AdSense code yahan paste karen (triple quotes ke andar)
-ADSENSE_CODE = """<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>"""
+ADSENSE_CODE = """<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2007612527496766"crossorigin="anonymous"></script>"""
 
 def inject_adsense_to_html(file_path):
     with open(file_path, 'r', encoding='utf-8') as file:
