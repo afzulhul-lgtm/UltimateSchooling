@@ -1,7 +1,9 @@
-# Ultimate Schooling - Robots.txt
+# Ultimate Schooling - Perfected Robots.txt
 # ============================================
 
 User-agent: *
+Crawl-delay: 1
+
 # Disallow sensitive directories
 Disallow: /cgi-bin/
 Disallow: /tmp/
@@ -18,34 +20,11 @@ Disallow: /*?s=
 Disallow: /print/
 Disallow: /amp/
 
-# Disallow WordPress-style paths (agar use nahi hote)
+# Disallow WordPress-style paths (agar use hote hain)
 Disallow: /wp-*
 Disallow: /wp-includes/
 Disallow: /xmlrpc.php
 Allow: /wp-admin/admin-ajax.php
-
-# Crawl delay for generic bots
-Crawl-delay: 1
-
-# ============================================
-# Additional Settings for Specific Bots
-# ============================================
-
-User-agent: Googlebot
-Disallow: /cgi-bin/
-Disallow: /tmp/
-Disallow: /admin/
-Disallow: /*?replytocom=
-Disallow: /search/
-
-User-agent: Bingbot
-Crawl-delay: 1
-
-User-agent: Yandex
-Crawl-delay: 2
-
-User-agent: Baiduspider
-Crawl-delay: 2
 
 # ============================================
 # Sitemap
