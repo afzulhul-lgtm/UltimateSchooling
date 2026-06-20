@@ -1,0 +1,985 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2007612527496766"crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GTA 6 Ferris Wheel Reflection Missing: What Rockstar's Ray Tracing BVH Bug Reveals About the RAGE Engine |
+        Ultimate Schooling</title>
+
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="description"
+        content="GTA 6's Ferris wheel casts zero water reflection despite surrounding buildings reflecting normally. Digital Foundry's Thomas Morgan pinpoints the exact ray tracing BVH cause—and what it means for RAGE Engine performance at the Fall 2026 launch.">
+    <meta name="keywords"
+        content="GTA 6 Ferris wheel reflection, GTA 6 ray tracing bug, Rockstar ray tracing, GTA 6 BVH exclusion, Digital Foundry GTA 6, Thomas Morgan GTA 6, GTA 6 RAGE engine, GTA 6 console performance, GTA 6 screen space reflections, GTA 6 missing reflection fix">
+    <link rel="canonical"
+        href="https://ultimateschooling.com/articles/gta-6s-missing-ferris-wheel-reflection-what-rockstars-ray-tracing-bug.html" />
+
+    <meta property="og:type" content="article">
+    <meta property="og:title"
+        content="GTA 6 Ferris Wheel Reflection Missing: What Rockstar's Ray Tracing BVH Bug Reveals About the RAGE Engine">
+    <meta property="og:description"
+        content="GTA 6's Ferris wheel casts zero water reflection despite surrounding buildings reflecting normally. Digital Foundry's Thomas Morgan pinpoints the exact ray tracing BVH cause and what it means for Fall 2026 console performance.">
+    <meta property="og:url"
+        content="https://ultimateschooling.com/articles/gta-6s-missing-ferris-wheel-reflection-what-rockstars-ray-tracing-bug.html">
+    <meta property="og:image" content="85.webp">
+    <meta property="og:site_name" content="Ultimate Schooling">
+    <meta property="article:published_time" content="2026-06-20">
+    <meta property="article:modified_time" content="2026-06-20">
+    <meta property="article:author" content="Marcus J. Holloway">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title"
+        content="GTA 6 Ferris Wheel Reflection Missing: What Rockstar's Ray Tracing BVH Bug Reveals About the RAGE Engine">
+    <meta name="twitter:description"
+        content="GTA 6's Ferris wheel casts zero water reflection despite surrounding buildings reflecting normally. Digital Foundry's Thomas Morgan pinpoints the exact ray tracing BVH cause and what it means for Fall 2026 console performance.">
+    <meta name="twitter:image" content="85.webp">
+    <meta name="twitter:creator" content="@ultimateschooling">
+
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💻</text></svg>">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        as="style">
+
+    <link rel="stylesheet" href="../style.css?v=4.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-JEDT0D5XS0"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-JEDT0D5XS0');
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "TechArticle",
+      "mainEntityOfPage": {"@type": "WebPage", "@id": "https://ultimateschooling.com/articles/gta-6s-missing-ferris-wheel-reflection-what-rockstars-ray-tracing-bug.html"},
+      "headline": "GTA 6 Ferris Wheel Reflection Missing: What Rockstar's Ray Tracing BVH Bug Reveals About the RAGE Engine",
+      "image": ["85.webp"],
+      "datePublished": "2026-06-20",
+      "dateModified": "2026-06-20",
+      "author": {
+        "@type": "Person",
+        "name": "Marcus J. Holloway",
+        "url": "https://ultimateschooling.com/author/marcus-holloway.html",
+        "jobTitle": "Senior Tech Educator",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Ultimate Schooling"
+        }
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Ultimate Schooling",
+        "logo": {"@type": "ImageObject", "url": "https://ultimateschooling.com/images/logo.webp"}
+      },
+      "description": "GTA 6's Ferris wheel casts zero water reflection despite surrounding buildings reflecting normally. Digital Foundry's Thomas Morgan pinpoints the exact ray tracing BVH cause and what it means for RAGE Engine performance at the Fall 2026 launch.",
+      "articleSection": "Gaming",
+      "keywords": "GTA 6 Ferris wheel reflection, GTA 6 ray tracing bug, Rockstar ray tracing, GTA 6 BVH exclusion, Digital Foundry GTA 6, Thomas Morgan GTA 6, GTA 6 RAGE engine, GTA 6 console performance"
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://ultimateschooling.com/"},
+        {"@type": "ListItem", "position": 2, "name": "Gaming", "item": "https://ultimateschooling.com/tech-news.html"},
+        {"@type": "ListItem", "position": 3, "name": "GTA 6 Ferris Wheel Reflection Missing: What Rockstar's Ray Tracing BVH Bug Reveals About the RAGE Engine"}
+      ]
+    }
+    </script>
+    <script
+        type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Article", "headline": "GTA 6 Ferris Wheel Reflection Missing: What Rockstar's Ray Tracing BVH Bug Reveals About the RAGE Engine", "author": {"@type": "Person", "name": "Marcus J. Holloway"}, "datePublished": "2026-06-20", "dateModified": "2026-06-20", "publisher": {"@type": "Organization", "name": "UltimateSchooling", "url": "https://ultimateschooling.com"}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://ultimateschooling.com/articles/gta-6s-missing-ferris-wheel-reflection-what-rockstars-ray-tracing-bug.html"}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://ultimateschooling.com"}, {"@type": "ListItem", "position": 2, "name": "Gaming", "item": "https://ultimateschooling.com/tech-news.html"}, {"@type": "ListItem", "position": 3, "name": "GTA 6 Ferris Wheel Reflection Missing: What Rockstar's Ray Tracing BVH Bug Reveals About the RAGE Engine", "item": "https://ultimateschooling.com/articles/gta-6s-missing-ferris-wheel-reflection-what-rockstars-ray-tracing-bug.html"}]}]}</script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the GTA 6 missing Ferris wheel reflection mystery?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "In the June 2026 GTA 6 trailer embedded on Rockstar's official website, a Ferris wheel on the Vice City skyline casts zero reflection in the water below — despite surrounding buildings reflecting clearly and stably. Digital Foundry analyst Thomas Morgan identified the cause as the RAGE Engine's Bounding Volume Hierarchy (BVH) configuration excluding the Ferris wheel from the ray tracing reflection pass to reduce GPU processing cost on console hardware. The Ferris wheel appears in neither the RT reflection pass nor the SSR fallback layer, confirming a deliberate per-object configuration decision rather than a general rendering failure."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does GTA 6 use ray tracing?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Analysis of the June 2026 GTA 6 trailer confirms the game uses a hybrid reflection pipeline: hardware ray-traced reflections handle primary scene geometry across Vice City's water bodies, while screen space reflections (SSR) serve as a lower-cost fallback at screen edges. The ray-traced reflections display no occlusion artifacts and remain stable when helicopters fly between the camera and reflected buildings — a signature characteristic of genuine hardware ray tracing rather than an SSR approximation. Reflected images appear slightly brighter than their source geometry, indicating separate tone mapping applied to the RT reflection buffer inside the RAGE Engine."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why isn't the Ferris wheel reflected in GTA 6's water?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "GTA 6's RAGE Engine uses a Bounding Volume Hierarchy (BVH) to determine which objects participate in each render pass. Developers can exclude individual objects from the RT reflection BVH, making them invisible in reflections while fully rendered in primary view. The Ferris wheel appears to carry this exclusion flag for both the RT reflection pass and the SSR depth capture — likely because its rotating geometry (outer ring, individual gondolas, spoke structure) makes it disproportionately expensive to ray trace in reflections relative to its visual contribution. Excluding it from the BVH removes that per-frame GPU cost while affecting only a background reflection most players would not notice during active gameplay."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Will Rockstar fix the missing Ferris wheel reflection before GTA 6 launches?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Digital Foundry characterizes the issue as a ray tracing configuration quirk that could plausibly be adjusted before the retail build. BVH object inclusion flags are low-friction to modify and require no code changes — only asset pipeline configuration updates. However, if the exclusion is a deliberate performance decision rather than an oversight, Rockstar may retain it in the final game. Camera distance also critically affects ray tracing behavior; at closer in-game distances the Ferris wheel may reflect normally. A 10-second trailer clip cannot reproduce dynamic gameplay camera conditions, so only the retail build provides a definitive answer."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "When is GTA 6 available for pre-order?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The June 2026 GTA 6 trailer confirmed pre-orders are now live through major retailers and digital storefronts, alongside the reveal of the game's official cover art and 80s-inflected soundtrack. GTA 6 is expected to launch in Fall 2026 for PS5 and Xbox Series X. Rockstar has not announced a simultaneous PC release for the initial launch window."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What does GTA 6's hybrid reflection system mean for console performance?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "GTA 6's two-layer reflection pipeline — hardware ray tracing for primary scene geometry, SSR as an edge-case fallback — is a proven high-budget console optimization strategy. Concentrating the ray tracing budget on major architectural surfaces where reflection accuracy delivers the highest visual impact allows Rockstar to deliver compelling waterfront reflections while managing frame rate targets on PS5's RDNA 2-based GPU. The Ferris wheel's BVH exclusion is a direct instance of this management: a geometrically complex, continuously moving object removed from the RT pass to preserve frame time budget for higher-priority scene elements, signaling Rockstar is targeting a stable performance output for the Fall 2026 launch."
+      }
+    }
+  ]
+}
+</script>
+
+    <style>
+        /* ── TOC ── */
+        .toc-box {
+            background: #f0f4ff;
+            border: 1px solid #d4e0ff;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0 30px;
+        }
+
+        .toc-box h2 {
+            font-size: 1.2rem;
+            margin-top: 0;
+            color: #2c3e9c;
+            margin-bottom: 15px;
+            border-bottom: none;
+        }
+
+        .toc-box ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .toc-box li {
+            margin-bottom: 8px;
+        }
+
+        .toc-box a {
+            color: #333;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            display: block;
+            padding-left: 15px;
+            position: relative;
+        }
+
+        .toc-box a::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: #2c3e9c;
+            font-weight: bold;
+        }
+
+        .toc-box a:hover {
+            color: #2c3e9c;
+            text-decoration: underline;
+        }
+
+        /* ── Key Takeaways ── */
+        .key-takeaways {
+            background: #e8eeff;
+            padding: 20px;
+            border-left: 5px solid #2c3e9c;
+            border-radius: 8px;
+            margin: 25px 0;
+        }
+
+        .key-takeaways h3 {
+            margin-top: 0;
+            color: #2c3e9c;
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            border-bottom: none;
+        }
+
+        .key-takeaways ul {
+            margin-bottom: 0;
+            padding-left: 20px;
+            line-height: 1.6;
+        }
+
+        /* ── Also Read ── */
+        .also-read {
+            background: #f0f4ff;
+            border-left: 5px solid #2c3e9c;
+            padding: 15px 20px;
+            border-radius: 8px;
+            margin: 25px 0;
+        }
+
+        .also-read h3 {
+            margin: 0 0 8px 0;
+            color: #2c3e9c;
+            font-size: 1rem;
+        }
+
+        .also-read a {
+            color: #2c3e9c;
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        .also-read a:hover {
+            text-decoration: underline;
+        }
+
+        /* ── Related Internal Links ── */
+        .related-internal-links {
+            background: #f0f4ff;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 25px 0;
+            border-left: 5px solid #2c3e9c;
+        }
+
+        .related-internal-links h3 {
+            margin-top: 0;
+            color: #2c3e9c;
+            font-size: 1.1rem;
+            margin-bottom: 12px;
+            border: none;
+        }
+
+        .related-internal-links ul {
+            margin-bottom: 0;
+            padding-left: 20px;
+            line-height: 1.8;
+        }
+
+        .related-internal-links a {
+            color: #2c3e9c;
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        .related-internal-links a:hover {
+            text-decoration: underline;
+        }
+
+        /* ── Article Table ── */
+        .article-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 25px 0;
+            font-size: 0.95rem;
+        }
+
+        .article-table th {
+            background: #2c3e9c;
+            color: #fff;
+            padding: 12px 15px;
+            text-align: left;
+        }
+
+        .article-table td {
+            padding: 10px 15px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .article-table tr:nth-child(even) td {
+            background: #f5f7ff;
+        }
+
+        .article-table tr:hover td {
+            background: #eef1ff;
+        }
+
+        /* ── Code Block ── */
+        .code-block {
+            background: #1e1e1e;
+            color: #d4d4d4;
+            padding: 20px;
+            border-radius: 8px;
+            overflow-x: auto;
+            margin: 20px 0;
+            font-family: 'Consolas', 'Monaco', monospace;
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+
+        .code-block code {
+            font-family: inherit;
+        }
+
+        /* ── Tip / Warning Boxes ── */
+        .tip-box {
+            background: #fff8e1;
+            border-left: 5px solid #ff9800;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 25px 0;
+        }
+
+        .tip-box h4 {
+            margin-top: 0;
+            color: #e65100;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .warning-box {
+            background: #ffebee;
+            border-left: 5px solid #f44336;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 25px 0;
+        }
+
+        .warning-box h4 {
+            margin-top: 0;
+            color: #c62828;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        /* ── Dark Mode ── */
+        [data-theme="dark"] .toc-box {
+            background: #1e1e1e;
+            border-color: #333;
+        }
+
+        [data-theme="dark"] .toc-box a {
+            color: #ccc;
+        }
+
+        [data-theme="dark"] .toc-box a:hover {
+            color: #4a6cf7;
+        }
+
+        [data-theme="dark"] .toc-box a::before {
+            color: #4a6cf7;
+        }
+
+        [data-theme="dark"] .toc-box h2 {
+            color: #4a6cf7;
+        }
+
+        [data-theme="dark"] .key-takeaways {
+            background: #1a1a3e;
+            border-left: 5px solid #4a6cf7;
+            color: #e0e0e0;
+        }
+
+        [data-theme="dark"] .key-takeaways h3 {
+            color: #4a6cf7;
+        }
+
+        [data-theme="dark"] .also-read {
+            background: #1a1a3e;
+            border-left-color: #4a6cf7;
+        }
+
+        [data-theme="dark"] .also-read h3 {
+            color: #4a6cf7;
+        }
+
+        [data-theme="dark"] .also-read a {
+            color: #4a6cf7;
+        }
+
+        [data-theme="dark"] .related-internal-links {
+            background: #1a1a3e;
+            border-left-color: #4a6cf7;
+        }
+
+        [data-theme="dark"] .related-internal-links h3 {
+            color: #4a6cf7;
+        }
+
+        [data-theme="dark"] .related-internal-links a {
+            color: #4a6cf7;
+        }
+
+        [data-theme="dark"] .article-table th {
+            background: #2a2a5e;
+        }
+
+        [data-theme="dark"] .article-table td {
+            border-color: #333;
+        }
+
+        [data-theme="dark"] .article-table tr:nth-child(even) td {
+            background: #1a1a2e;
+        }
+
+        [data-theme="dark"] .article-table tr:hover td {
+            background: #222244;
+        }
+
+        [data-theme="dark"] .tip-box {
+            background: #2a2000;
+            border-left-color: #ff9800;
+        }
+
+        [data-theme="dark"] .tip-box h4 {
+            color: #ffb74d;
+        }
+
+        [data-theme="dark"] .warning-box {
+            background: #2a0000;
+            border-left-color: #f44336;
+        }
+
+        [data-theme="dark"] .warning-box h4 {
+            color: #ef9a9a;
+        }
+
+        [data-theme="dark"] .code-block {
+            background: #0d0d0d;
+        }
+    </style>
+
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+
+</head>
+
+<body>
+    <script>if (localStorage.getItem('theme') === 'dark') document.documentElement.setAttribute('data-theme', 'dark');</script>
+
+    <div class="reading-progress-container">
+        <div class="reading-progress-bar" id="reading-progress"></div>
+    </div>
+
+    <!-- Floating Share Buttons -->
+    <div class="floating-share"
+        style="position: fixed; left: 10px; top: 30%; display: flex; flex-direction: column; gap: 10px; z-index: 1000;">
+        <a href="https://api.whatsapp.com/send?text=Check out this tutorial: https://ultimateschooling.com/articles/gta-6s-missing-ferris-wheel-reflection-what-rockstars-ray-tracing-bug.html"
+            target="_blank" class="share-btn btn-wa" aria-label="Share on WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://t.me/share/url?url=https://ultimateschooling.com/articles/gta-6s-missing-ferris-wheel-reflection-what-rockstars-ray-tracing-bug.html&text=GTA 6's Missing Ferris Wheel Reflection: What Rockstar's Ray Tracing Bug Reveals About the RAGE Engine"
+            target="_blank" class="share-btn btn-tg" aria-label="Share on Telegram"><i
+                class="fab fa-telegram-plane"></i></a>
+        <a href="https://www.facebook.com/sharer/sharer.php?u=https://ultimateschooling.com/articles/gta-6s-missing-ferris-wheel-reflection-what-rockstars-ray-tracing-bug.html"
+            target="_blank" class="share-btn btn-fb" aria-label="Share on Facebook"><i
+                class="fab fa-facebook-f"></i></a>
+        <a href="https://twitter.com/intent/tweet?url=https://ultimateschooling.com/articles/gta-6s-missing-ferris-wheel-reflection-what-rockstars-ray-tracing-bug.html&text=GTA 6's Missing Ferris Wheel Reflection: What Rockstar's Ray Tracing Bug Reveals About the RAGE Engine"
+            target="_blank" class="share-btn btn-tw" aria-label="Share on Twitter"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://ultimateschooling.com/articles/gta-6s-missing-ferris-wheel-reflection-what-rockstars-ray-tracing-bug.html"
+            target="_blank" class="share-btn btn-in" aria-label="Share on LinkedIn"><i
+                class="fab fa-linkedin-in"></i></a>
+    </div>
+
+    <!-- Top Ticker Bar -->
+    <div class="top-ticker-bar">
+        <div class="container ticker-container">
+            <span class="ticker-label"><i class="fas fa-code"></i> TECH TIPS</span>
+            <div class="ticker-content-wrapper">
+                <div class="ticker-content" id="hot-news-ticker"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="main-header" style="margin-bottom: 0;">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="../index.html" style="text-decoration: none; color: inherit;">
+                        <h1>💻 Ultimate Schooling</h1>
+                    </a>
+                </div>
+                <nav class="main-nav" aria-label="Main Navigation">
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="../tech-news.html">Tech News</a></li>
+                        <li><a href="../calculators.html">Tools</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Utility Bar -->
+    <div class="utility-bar">
+        <div class="container utility-bar-inner">
+            <div class="utility-left">
+                <span id="current-date-display" class="date-display"></span>
+            </div>
+            <div class="utility-right">
+                <div class="top-actions">
+                    <button id="dark-mode-toggle" title="Toggle Dark Mode" aria-label="Toggle Dark Mode"><i
+                            class="fas fa-moon"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <main class="container main-content">
+        <div class="content-wrapper">
+            <div class="article-content">
+
+                <!-- Breadcrumb -->
+                <div class="breadcrumb" style="margin-bottom: 20px; font-size: 0.9rem; color: #666;">
+                    <a href="#" onclick="window.history.back(); return false;"
+                        style="color: #2c3e9c; font-weight: 600; margin-right: 10px;">&larr; Go Back</a> | &nbsp;
+                    <a href="../index.html" style="color: #2c3e9c;">Home</a> &gt;
+                    <a href="../tech-news.html" style="color: #2c3e9c;">Gaming</a> &gt;
+                    <span>GTA 6 Ferris Wheel Reflection Missing: What Rockstar's Ray Tracing BVH Bug Reveals About the
+                        RAGE Engine</span>
+                </div>
+
+                <article class="main-article">
+                    <div class="article-header">
+                        <h1
+                            style="font-size: 2.2rem; font-weight: 700; color: #111; line-height: 1.3; margin-bottom: 20px;">
+                            GTA 6 Ferris Wheel Reflection Missing: What Rockstar's Ray Tracing BVH Bug Reveals About
+                            RAGE Engine Performance</h1>
+
+                        <!-- Author Meta — NOW DYNAMIC -->
+                        <div class="article-meta"
+                            style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:15px; padding-bottom: 20px; border-bottom: 1px solid #eee;">
+                            <div class="author-info-header">
+
+                                <div class="author-text">
+                                    <span class="by-text">By</span>
+                                    <span class="author-name-text" id="header-author-name">
+                                        Marcus J. Holloway
+                                        <i class="fas fa-check-circle verified-tick"
+                                            style="color:#1da1f2; font-size:0.85rem;"></i>
+                                    </span>
+                                    <span style="font-size: 0.75rem; color: #888; display: block;">Senior Tech
+                                        Educator</span>
+                                </div>
+                            </div>
+                            <div class="publish-date"
+                                style="display: flex; gap: 15px; align-items: center; font-size: 0.9rem; flex-wrap: wrap;">
+                                <span style="color: #666;"><i class="far fa-calendar-alt"></i> Published: <time
+                                        datetime="2026-06-20">June 20, 2026</time></span>
+                                <span style="color: #2c3e9c; font-weight: 500;"><i class="fas fa-sync-alt"></i> Updated:
+                                    June 20, 2026</span>
+                                <span><i class="far fa-clock" style="color: #888;"></i> 9 Min Read</span>
+                            </div>
+                        </div>
+
+                        <!-- Featured Image -->
+                        <div class="article-featured-image" style="margin: 20px 0;">
+                            <img src="85.webp"
+                                alt="GTA 6 missing Ferris wheel reflection — Vice City waterfront at night showing Rockstar's ray tracing BVH exclusion analysis"
+                                loading="eager" fetchpriority="high" width="1200" height="675"
+                                style="width: 100%; height: auto; object-fit: cover; border-radius: 8px;">
+                        </div>
+                    </div>
+
+                    <!-- Article Body -->
+                    <div class="article-body">
+                        <p>The GTA 6 Ferris wheel has no water reflection because Rockstar's RAGE Engine Bounding Volume
+                            Hierarchy (BVH) deliberately excludes it from the ray tracing pass — a GPU performance
+                            optimization targeting stable console frame rates at the Fall 2026 launch. Digital Foundry
+                            analyst Thomas Morgan confirmed this in his technical breakdown of the June 2026 GTA 6
+                            trailer, which also revealed the game's pre-order date, official cover art, and
+                            80s-inflected soundtrack. This is not a conventional rendering glitch; it's a selective
+                            resource allocation decision that provides a rare, unguarded look at the performance
+                            trade-offs Rockstar is navigating as Vice City's release approaches on PS5 and Xbox Series
+                            X.</p>
+                        <p>The implications extend well beyond trailer frame-counting. GTA 6 runs on a significantly
+                            evolved RAGE (Rockstar Advanced Game Engine) configured with hybrid ray tracing across Vice
+                            City's vast waterfront environment. When one specific object — the Ferris wheel — generates
+                            zero reflection while nearby skyscrapers render theirs flawlessly, it exposes exactly how
+                            Rockstar's rendering pipeline assigns ray tracing resources across an open world of this
+                            scale. This breakdown covers what happened, why it happened, and what the GTA 6 missing
+                            Ferris wheel reflection signals about graphics and performance on consoles when the game
+                            ships.</p>
+
+                        <h2 id="section1">GTA 6's New Trailer: Pre-Order Date, Cover Art — and a Hidden Ray Tracing
+                            Anomaly</h2>
+                        <div class="related-internal-links">
+                            <h3><i class="fas fa-link"></i> Recommended Reading:</h3>
+                            <ul>
+                                <li><a
+                                        href="https://ultimateschooling.com/articles/strauss-zelnick-calls-idea-of-ai-generated-gta-6-laughable-38.html">Strauss
+                                        Zelnick Calls Idea Of Ai Generated Gta 6 Laughable →</a></li>
+                                <li><a
+                                        href="https://ultimateschooling.com/articles/oil-prices-drop-as-the-g7-considers-releasing-up-to-400-million-barrel-14.html">Oil
+                                        Prices Drop As The G7 Considers Releasing Up To 400 Million Barrel →</a></li>
+                            </ul>
+                        </div>
+
+                        <p>The June 2026 GTA 6 trailer delivered on multiple fronts simultaneously. Rockstar announced
+                            the pre-order date, dropped the official cover art featuring the game's dual protagonists,
+                            and embedded a short gameplay clip directly on Rockstar's official website. That clip — just
+                            10 seconds of Vice City's nighttime skyline — quickly became the subject of a frame-by-frame
+                            Digital Foundry analysis that uncovered a graphics anomaly Rockstar has not publicly
+                            addressed.</p>
+                        <p>The footage shows Vice City's downtown waterfront under a night sky, with surrounding
+                            skyscrapers and architectural surfaces reflecting stably and cleanly across the bay. The
+                            anomaly is positioned at the edge of the frame: a Ferris wheel at the far side of the bay
+                            that produces zero reflection in the water below it. Every major building in the same shot
+                            reflects. The Ferris wheel does not. Thomas Morgan's analysis confirmed this isn't a camera
+                            angle artifact, a video compression issue, or an object simply too distant to reflect — the
+                            reflection is genuinely absent from both the ray-traced pass and the screen space fallback
+                            layer simultaneously, which is the technical fingerprint of a deliberate per-object
+                            configuration rather than a distance-based limitation.</p>
+
+                        <h2 id="section2">The Ferris Wheel That Casts No Reflection — What Digital Foundry's
+                            Frame-by-Frame Analysis Found</h2>
+                        <p>Digital Foundry's Thomas Morgan subjected the 10-second clip to pixel-level scrutiny and
+                            produced the most technically precise GTA 6 graphics analysis available to date. His core
+                            finding: GTA 6 uses a hybrid reflection architecture that pairs hardware ray-traced
+                            reflections for primary scene geometry with screen space reflections (SSR) as a lower-cost
+                            fallback for content near screen edges where ray tracing isn't cost-effective.</p>
+                        <p>The ray-traced reflections Morgan examined demonstrate zero occlusion artifacts — a
+                            definitive indicator of genuine hardware RT rather than an SSR approximation. Buildings
+                            remain accurately reflected in the bay even when a helicopter passes between the camera
+                            position and the reflected building geometry, a test that SSR fails categorically because it
+                            can only work with what is visible on screen. The reflected images do appear noticeably
+                            brighter than their corresponding source objects in the primary scene, which Morgan
+                            attributes to separate tone-mapping applied to the ray-traced reflection buffer within the
+                            RAGE Engine's rendering pipeline — a characteristic observed in other RAGE-powered Rockstar
+                            titles and a detail that confirms the sophistication of the GTA 6 lighting model.</p>
+                        <p>Against this technically impressive backdrop, the Ferris wheel's complete absence stands out
+                            clearly. No RT reflection. No SSR fallback reflection. The water surface beneath it renders
+                            as though the object doesn't exist. This combination — missing from both reflection systems
+                            simultaneously — is the signature of a deliberate BVH object exclusion flag rather than a
+                            general rendering limitation, a draw distance cutoff, or a work-in-progress placeholder left
+                            unfinished.</p>
+
+                        <div class="also-read">
+                            <h3><i class="fas fa-book-reader"></i> Also Read</h3><a href="../tech-news.html">More Gaming
+                                stories &rarr;</a>
+                        </div>
+
+
+                        <h2 id="section3">Ray Tracing vs. Screen Space Reflections — How GTA 6's Hybrid System Actually
+                            Works</h2>
+                        <p>Understanding exactly why the GTA 6 Ferris wheel reflection is absent requires a clear
+                            picture of how the game's two-layer reflection system operates and where each technique is
+                            cost-effective.</p>
+                        <p>Ray tracing (RT) generates reflections by casting virtual light rays from the camera into the
+                            scene and calculating physically accurate reflection paths based on real surface geometry
+                            and material properties. The result is reflection data that remains stable regardless of
+                            camera movement, persists for off-screen objects within range, and produces none of the
+                            edge-case artifacts that rasterization methods generate. It is computationally expensive —
+                            cost scales with scene geometry complexity, material complexity, and the number of rays cast
+                            per pixel. In GTA 6, ray tracing handles the primary reflection workload for major
+                            architectural geometry across Vice City's extensive water bodies, and Morgan's analysis
+                            confirms this delivers convincing, artifact-free results for buildings and large structures.
+                        </p>
+                        <p>Screen Space Reflections (SSR) is a rasterization-based technique that generates reflections
+                            using only what is currently visible on screen. SSR is significantly cheaper than RT but
+                            comes with hard limitations: it cannot reflect off-screen objects, breaks down at screen
+                            edges where screen-space data ends, and produces artifacts during rapid camera movement. In
+                            GTA 6, SSR acts as a complementary fallback — filling in reflection data in areas where full
+                            ray tracing is not cost-effective, particularly near screen edges and for secondary surfaces
+                            where RT quality isn't essential.</p>
+                        <p>The hybrid architecture is a proven strategy for delivering high-quality reflections within
+                            the GPU budgets of current console hardware. By allocating full RT processing to the
+                            highest-impact geometry and using SSR to cover gaps at minimal additional cost, Rockstar
+                            achieves visually compelling waterfront reflections across Vice City without pushing the
+                            PS5's RDNA 2-based GPU into frame-time instability. The Ferris wheel's complete absence from
+                            both systems, however, points to a more specific, object-level configuration decision that
+                            sits above and beyond the normal hybrid system behavior.</p>
+                        <div class="key-takeaways">
+                            <h3>Key Takeaways</h3>
+                            <ul>
+                                <li>GTA 6 uses a two-layer reflection pipeline: hardware ray-traced reflections for
+                                    primary scene architecture, with SSR as a cost-effective fallback at screen edges.
+                                </li>
+                                <li>The Ferris wheel is absent from both the RT reflection pass and the SSR fallback —
+                                    the technical signature of a deliberate BVH object exclusion flag, not a general
+                                    rendering limitation.</li>
+                                <li>Per-object BVH exclusion is standard AAA practice used in Cyberpunk 2077, Alan Wake
+                                    2, and Spider-Man 2 to manage GPU performance on console hardware.</li>
+                                <li>Trailer footage is a work-in-progress build; BVH configuration flags are
+                                    low-friction to adjust before the Fall 2026 retail launch if Rockstar chooses to do
+                                    so.</li>
+                            </ul>
+                        </div>
+
+                        <h2 id="section4">Why the Ferris Wheel Isn't Reflected in GTA 6: BVH Object Exclusion Explained
+                            in Detail</h2>
+                        <p>The Bounding Volume Hierarchy (BVH) is the data structure that makes real-time ray tracing
+                            computationally viable in a game like GTA 6. Rather than testing every cast ray against
+                            every polygon in Vice City's enormous open world — which would be prohibitively expensive —
+                            the ray tracing engine traverses the BVH, a hierarchical tree of bounding volumes that
+                            rapidly identifies which objects a given ray could possibly intersect. BVH traversal cost
+                            scales with the complexity and quantity of geometry included in the hierarchy.</p>
+                        <p>Developers can configure which objects get included in the BVH for specific render passes.
+                            Excluding an object from the reflection BVH means that rays cast specifically for the water
+                            reflection pass will never test against that object — rendering it completely invisible in
+                            reflections while leaving it fully rendered and visible in the primary scene. This is not a
+                            bug in the conventional sense. It is a deliberate, per-object flag applied within the asset
+                            pipeline, identical in function to how a developer might flag an object as
+                            non-shadow-casting to save shadow map cost.</p>
+                        <p>The GTA 6 Ferris wheel carries this exclusion flag for both the RT reflection BVH and the SSR
+                            depth pre-pass, which is precisely why neither system renders its reflection. The most
+                            technically grounded explanation for the exclusion is cost relative to visual impact: the
+                            Ferris wheel is a structurally complex, continuously moving object with hundreds of
+                            individually rendered components — the outer rotating ring, radial spokes, hanging gondolas,
+                            and lighting rigs all in constant motion. Ray tracing a rotating, multi-component object in
+                            reflections requires significantly more BVH traversal steps per frame than reflecting a
+                            static rectangular building facade, where a single large bounding volume resolves quickly.
+                            Removing it from the reflection BVH eliminates that compounding per-frame cost entirely.</p>
+                        <p>This type of selective BVH configuration is standard practice in modern AAA ray tracing.
+                            Cyberpunk 2077, Alan Wake 2, and Marvel's Spider-Man 2 all apply per-object RT inclusion
+                            flags to balance GPU load across demanding environments. The difference with GTA 6 is the
+                            visibility of the trade-off — a large, prominently positioned, and brightly lit Ferris wheel
+                            against an otherwise reflection-rich Vice City nighttime skyline makes the exclusion
+                            immediately detectable to attentive observers, in a way that a missing reflection on a small
+                            background prop never would be.</p>
+
+                        <h2 id="section5">What GTA 6's Missing Reflection Reveals About Rockstar's Console Performance
+                            Budget</h2>
+                        <p>The Ferris wheel's BVH exclusion provides a concrete, specific data point about how Rockstar
+                            is distributing GTA 6's ray tracing budget across Vice City's open world. The environment is
+                            substantially larger and more geometrically dense than anything in GTA V or Red Dead
+                            Redemption 2, and Rockstar is simultaneously targeting ray-traced reflections across Vice
+                            City's expansive bay and waterfront — a workload combination that places significant ongoing
+                            pressure on console GPU resources.</p>
+                        <p>Console ray tracing operates under fundamentally different constraints than PC ray tracing.
+                            The PS5's RDNA 2-based GPU supports hardware-accelerated BVH traversal, but at substantially
+                            lower throughput than a contemporary high-end PC graphics card. Maintaining a stable 30fps
+                            or 60fps output while simultaneously rendering Vice City's full geometry, dynamic weather
+                            systems, dense NPC and traffic simulation, and ray-traced reflections across large bodies of
+                            water leaves limited headroom for complex geometry in the RT reflection pass.</p>
+                        <p>The Ferris wheel presents an unfavorable cost-to-benefit ratio for the RT reflection pass
+                            specifically. A large rectangular building occupies a simple bounding volume that ray
+                            tracing resolves efficiently — the geometry is static, the bounding box is tight, and
+                            traversal terminates quickly. A Ferris wheel's circular geometry, individual gondola
+                            geometry, radial spoke structure, and frame-by-frame rotation introduce compounding BVH
+                            traversal cost per reflection ray that a static architectural structure never generates.
+                            Excluding it from the reflection BVH preserves frame time budget for geometry where RT
+                            reflection quality is more visually meaningful to the player during active gameplay.</p>
+                        <p>For console players, this signals that GTA 6's ray tracing will be carefully curated rather
+                            than comprehensively applied. The waterfront reflection quality shown in the trailer is
+                            genuinely impressive — stable, high-quality, artifact-free reflections across a large urban
+                            bay. But it represents a selective allocation of RT resources managed at the per-object
+                            level, not a blanket application of ray tracing to everything in the scene. That is the
+                            practical reality of delivering hardware ray tracing in a stable open-world title on current
+                            console hardware in 2026, and Rockstar appears to be managing it with the same technical
+                            discipline seen in the best RT console titles released to date.</p>
+
+                        <h2 id="section6">Will Rockstar Fix the Missing Ferris Wheel Reflection Before GTA 6 Launches in
+                            Fall 2026?</h2>
+                        <p>Digital Foundry's position is measured and technically grounded: the missing GTA 6 Ferris
+                            wheel reflection is a ray tracing configuration quirk that could realistically be adjusted
+                            before the final retail build ships. BVH object inclusion flags sit among the most
+                            modifiable parameters in late-stage game development — they require no code changes, only
+                            configuration updates in the asset pipeline, and can be toggled without risking broader
+                            rendering stability. If the exclusion originated from conservative early performance
+                            profiling, a pre-launch optimization pass targeting improved hardware utilization could
+                            include the Ferris wheel in the RT reflection BVH without major risk.</p>
+                        <p>Two complicating variables work against a confident prediction. Camera distance critically
+                            affects ray tracing behavior, including threshold distances for RT reflection draw ranges
+                            and SSR capture volumes. The trailer footage captures the Ferris wheel at a specific view
+                            distance that may place it near the boundary of the RT reflection draw distance or just
+                            outside the SSR capture volume. At closer gameplay distances — when the player navigates the
+                            Vice City waterfront on foot or in a vehicle — the same Ferris wheel might reflect cleanly
+                            in both systems under normal conditions. A fixed 10-second trailer clip cannot replicate the
+                            dynamic camera conditions of active gameplay.</p>
+                        <p>Second, if the BVH exclusion is a deliberate, permanent performance decision rather than a
+                            configuration oversight, Rockstar may leave it unchanged in the retail build. The Ferris
+                            wheel sits at the periphery of the trailer camera angle and at the far edge of the bay;
+                            during active gameplay, the vast majority of players would never notice a missing background
+                            reflection while navigating missions, driving through Vice City's streets, or engaging with
+                            the game's dense simulation systems. If retaining the exclusion is what enables a 60fps
+                            performance mode or a higher-fidelity 30fps mode, it is a fully justifiable engineering
+                            trade-off.</p>
+                        <p>The retail build will deliver the only definitive answer. Until then, the GTA 6 Ferris wheel
+                            reflection stands as the most informative publicly visible evidence of how Rockstar's RAGE
+                            Engine is distributing ray tracing resources across Vice City ahead of the Fall 2026 launch
+                            — and it tells a coherent, technically sound story about the realities of console ray
+                            tracing at this scale.</p>
+
+                        <h2 id="section-faq">Frequently Asked Questions</h2>
+                        <h3>What is the GTA 6 missing Ferris wheel reflection mystery?</h3>
+                        <p>In the June 2026 GTA 6 trailer embedded on Rockstar's official website, a Ferris wheel on the
+                            Vice City skyline casts zero reflection in the water below — despite surrounding buildings
+                            reflecting clearly and stably in both ray-traced and screen-space data. Digital Foundry
+                            analyst Thomas Morgan identified the cause as the RAGE Engine's Bounding Volume Hierarchy
+                            (BVH) configuration excluding the Ferris wheel from the ray tracing reflection pass to
+                            reduce GPU processing cost on console hardware. The Ferris wheel appears in neither the RT
+                            reflection pass nor the SSR fallback layer, confirming a deliberate per-object configuration
+                            decision rather than a general rendering failure or a distance-based limitation.</p>
+                        <h3>Does GTA 6 use ray tracing?</h3>
+                        <p>Yes. Analysis of the June 2026 GTA 6 trailer confirms the game uses a hybrid reflection
+                            pipeline: hardware ray-traced reflections handle primary scene geometry across Vice City's
+                            water bodies, while screen space reflections (SSR) serve as a lower-cost fallback at screen
+                            edges. The ray-traced reflections display no occlusion artifacts and remain stable when
+                            helicopters fly between the camera and reflected buildings — a signature characteristic of
+                            genuine hardware ray tracing rather than an SSR approximation. Reflected images appear
+                            slightly brighter than their source geometry, pointing to separate tone mapping applied to
+                            the RT reflection buffer inside the RAGE Engine, consistent with the rendering approach seen
+                            in other high-fidelity RT titles.</p>
+                        <h3>Why isn't the Ferris wheel reflected in GTA 6's water?</h3>
+                        <p>GTA 6's RAGE Engine uses a Bounding Volume Hierarchy (BVH) to determine which objects
+                            participate in each render pass. Developers can exclude individual objects from the RT
+                            reflection BVH, making them invisible in reflections while fully rendered in the primary
+                            scene view. The Ferris wheel appears to carry this exclusion flag for both the RT reflection
+                            pass and the SSR depth capture — likely because its continuously rotating geometry (outer
+                            ring, individual gondolas, spoke structure) makes it disproportionately expensive to ray
+                            trace in reflections relative to its visual contribution to the scene. Excluding it from the
+                            BVH removes that per-frame GPU cost entirely while affecting only a background reflection
+                            most players would not notice during active gameplay.</p>
+                        <h3>Will Rockstar fix the missing Ferris wheel reflection before GTA 6 launches?</h3>
+                        <p>Digital Foundry characterizes the issue as a ray tracing configuration quirk that could
+                            plausibly be adjusted before the retail build. BVH object inclusion flags are among the
+                            lowest-friction parameters to modify in late-stage development — requiring only asset
+                            pipeline configuration updates, not code changes. However, if the exclusion is a deliberate
+                            performance decision rather than an oversight, Rockstar may retain it in the final game.
+                            Camera distance also critically affects ray tracing behavior; at closer in-game distances
+                            the Ferris wheel may reflect normally. A 10-second trailer clip cannot replicate dynamic
+                            gameplay camera conditions, so only the shipping retail build provides a definitive answer.
+                        </p>
+                        <h3>When is GTA 6 available for pre-order?</h3>
+                        <p>The June 2026 GTA 6 trailer confirmed pre-orders are now live through major retailers and
+                            digital storefronts, alongside the reveal of the official cover art and 80s-inflected
+                            soundtrack. GTA 6 is expected to launch in Fall 2026 for PS5 and Xbox Series X. Rockstar has
+                            not announced a simultaneous PC release for the initial launch window, consistent with the
+                            studio's past multi-platform release patterns.</p>
+                        <h3>What does GTA 6's hybrid reflection system mean for console performance?</h3>
+                        <p>GTA 6's two-layer reflection pipeline — hardware ray tracing for primary scene geometry, SSR
+                            as an edge-case fallback — is a proven high-budget console optimization strategy.
+                            Concentrating the ray tracing budget on major architectural surfaces where reflection
+                            accuracy delivers the highest visual impact allows Rockstar to deliver compelling waterfront
+                            reflections while managing frame rate targets on PS5's RDNA 2-based GPU. The Ferris wheel's
+                            BVH exclusion is a direct instance of this management in action: a geometrically complex,
+                            continuously moving object removed from the RT pass to preserve frame time for
+                            higher-priority scene elements. The approach signals Rockstar is targeting a stable,
+                            consistent performance output for Fall 2026 — whether 30fps or 60fps — rather than allowing
+                            reflection quality to vary dynamically in ways that generate frame time spikes during dense
+                            open-world traversal.</p>
+
+                        <h2 id="conclusion">Conclusion</h2>
+                        <p>The GTA 6 Ferris wheel reflection is absent from the Vice City waterfront because Rockstar's
+                            RAGE Engine is making exactly the kind of performance management decisions a mature,
+                            production-ready ray tracing pipeline requires: allocating expensive GPU ray tracing budget
+                            selectively, weighted by visual impact versus computational cost. Digital Foundry's Thomas
+                            Morgan has delivered the clearest technical picture of GTA 6's graphics architecture
+                            available before launch — and it shows a team carefully managing one of the most demanding
+                            ray tracing workloads ever attempted in a console open-world title. The per-object BVH
+                            exclusion technique the Ferris wheel reveals is not a sign of technical limitation; it is
+                            evidence of deliberate engineering discipline applied at the asset level.</p>
+                        <p>Whether the GTA 6 Ferris wheel reflection gets corrected in the retail build depends on
+                            Rockstar's final optimization pass and their confirmed performance targets. What the June
+                            2026 trailer footage already establishes is that the RAGE Engine's hybrid RT/SSR system
+                            delivers stable, high-quality reflections across Vice City's waterfront, that per-object BVH
+                            configuration operates at a granular level in GTA 6's rendering pipeline, and that Fall 2026
+                            will bring the most technically sophisticated open-world rendering seen on PS5 and Xbox
+                            Series X. The missing GTA 6 Ferris wheel reflection may be resolved before launch — but its
+                            discovery has revealed more about Rockstar's engine priorities and engineering approach than
+                            any official technical disclosure the studio has made to date.</p>
+                    </div>
+
+                    <!-- Author Bio — ALSO DYNAMIC -->
+                    <div class="author-bio"
+                        style="margin-top:50px; padding:25px; background:#e8eeff; border-radius:12px; display:flex; gap:20px; align-items:center; border: 1px solid #d4e0ff;">
+                        <img id="bio-author-img" src="../Marcus-Holloway.webp" alt="Marcus J. Holloway" loading="lazy"
+                            width="70" height="70"
+                            style="width:70px; height:70px; border-radius:50%; object-fit:cover; border:2px solid #fff; box-shadow:0 2px 10px rgba(0,0,0,0.1);">
+                        <div>
+                            <h3 style="margin-bottom:5px; font-size:1.2rem; color:#222;">
+                                Marcus J. Holloway
+                                <i class="fas fa-check-circle verified-tick" style="color:#1da1f2; font-size:1rem;"></i>
+                            </h3>
+                            <p style="font-size:0.85rem; color:#2c3e9c; margin:0 0 5px 0; font-weight: 600;">Senior Tech
+                                Educator &amp; AI Researcher</p>
+                            <p style="font-size:0.95rem; color:#666; margin:0;">Technology and gaming journalist with
+                                15+ years of experience covering Nintendo, Sony, and Microsoft platforms. Has tracked
+                                Zelda franchise developments across every generation from N64 to Switch 2. Dedicated to
+                                making complex gaming industry developments accessible to readers worldwide through
+                                Ultimate Schooling.</p>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Comments -->
+                <div class="comments-section">
+                    <h2 class="section-title">💬 Questions or Comments?</h2>
+                    <p class="comment-note">Have a question about this tutorial or want to share your thoughts? Leave a
+                        comment below!</p>
+                    <form id="comment-form" class="comment-form">
+                        <div class="form-row">
+                            <div class="form-group"><input type="text" id="comment-name" placeholder="Your Name *"
+                                    required aria-label="Name"></div>
+                            <div class="form-group"><input type="email" id="comment-email" placeholder="Your Email *"
+                                    required aria-label="Email"></div>
+                        </div>
+                        <div class="form-group"><textarea id="comment-msg" placeholder="Your Comment or Question *"
+                                required aria-label="Comment"></textarea></div>
+                        <button type="submit" class="submit-btn">Post Comment</button>
+                    </form>
+                    <div id="comments-display-area" class="comments-list"></div>
+                </div>
+
+            </div>
+
+            <!-- Sidebar -->
+            <aside class="sidebar">
+                <div class="sidebar-widget">
+                    <h3><i class="fas fa-graduation-cap" style="color: #2c3e9c;"></i> RECOMMENDED</h3>
+                    <div class="latest-articles" id="sidebar-articles"></div>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" style="background: #2c3e50; padding: 40px 0 20px; margin-top: 60px; border-top: none;">
+        <div class="container">
+            <div class="footer-socials" style="display: flex; justify-content: center; gap: 15px; margin-bottom: 25px;">
+                <a href="#"
+                    style="width:40px;height:40px;background:#1877F2;color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;text-decoration:none;"
+                    aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"
+                    style="width:40px;height:40px;background:#1DA1F2;color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;text-decoration:none;"
+                    aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="#"
+                    style="width:40px;height:40px;background:#E1306C;color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;text-decoration:none;"
+                    aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            </div>
+            <div class="footer-links"
+                style="display: flex; justify-content: center; gap: 25px; flex-wrap: wrap; margin-bottom: 20px; font-weight: 500;">
+                <a href="../about.html" style="color: #fff; text-decoration: none;">About Us</a>
+                <a href="../contact.html" style="color: #fff; text-decoration: none;">Contact Us</a>
+                <a href="../privacy.html" style="color: #fff; text-decoration: none;">Privacy Policy</a>
+                <a href="../terms.html" style="color: #fff; text-decoration: none;">Terms & Conditions</a>
+                <a href="../dmca.html" style="color: #fff; text-decoration: none;">DMCA</a>
+            </div>
+            <div class="copyright"
+                style="text-align: center; color: rgba(255,255,255,0.8); font-size: 0.9rem; border-top: 1px solid rgba(255,255,255,0.2); padding-top: 20px;">
+                <p>&copy; 2026 Ultimate Schooling - All rights reserved</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../script.js?v=4.0" defer></script>
+</body>
+
+</html>
