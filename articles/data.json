@@ -1,10 +1,21 @@
 [
     {
+        "id": 84,
+        "title": "Samsung Galaxy Z Fold 8 Official Teasers Drop: 'New Shape, New Joy' Campaign Hints at Wider Design Ahead of July 22 Launch",
+        "date": "July 02, 2026",
+        "author": "Marcus J. Holloway",
+        "authorImg": "../Marcus-Holloway.webp",
+        "category": "Technology",
+        "image": "88.webp",
+        "filename": "samsung-galaxy-z-fold-8-official-teasers-drop-new-shape-new-joy-campai.html",
+        "excerpt": "Discover the latest Galaxy Z Fold 8 teaser campaign and what it reveals about Samsung's new shape and design."
+    },
+    {
         "id": 83,
         "title": "Tears of Metal Coming to Xbox Game Pass July 22 — Scottish Dynasty Warriors Co-op Roguelike With 400,000 Wishlists",
         "date": "June 26, 2026",
         "author": "Marcus J. Holloway",
-        "authorImg":"../Marcus-Holloway.webp",
+        "authorImg": "../Marcus-Holloway.webp",
         "category": "Gaming",
         "image": "87.webp",
         "filename": "tears-of-metal-coming-to-xbox-game-pass-july-22-scottish-dynasty-warri.html",
@@ -15,7 +26,7 @@
         "title": "Xbox Console Prices Increase Up to $150 Starting August 1 — AI Memory Demand Blamed for Soaring Component Costs",
         "date": "June 26, 2026",
         "author": "Marcus J. Holloway",
-        "authorImg":"../Marcus-Holloway.webp",
+        "authorImg": "../Marcus-Holloway.webp",
         "category": "Tech News",
         "image": "86.webp",
         "filename": "xbox-console-prices-increase-up-to-150-starting-august-1-ai-memory-dem.html",
